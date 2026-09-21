@@ -15,7 +15,7 @@
   "links": [
     { "label": "Email", "icon": "email", "url": "mailto:ellara@mta.ac.il" },
     { "label": "Google Scholar", "icon": "googlescholar", "url": "https://scholar.google.com/scholar?q=%22Ella+Rabinovich%22" },
-    { "label": "Linkedin", "icon": "linkedin", "url": "https://www.linkedin.com/in/ella-rabinovich-7b9a06/" },
-    { "label": "ACL Anthology", "icon": "link", "url": "https://aclanthology.org/people/ella-rabinovich/unverified/" }
+    { "label": "ACL Anthology", "icon": "link", "url": "https://aclanthology.org/people/ella-rabinovich/unverified/" },
+    { "label": "Linkedin", "icon": "linkedin", "url": "https://www.linkedin.com/in/ella-rabinovich-7b9a06/" }
   ]
 }
