@@ -10,21 +10,24 @@ Personal academic website of **Ella Rabinovich, Ph.D.**: profile, publications, 
 
 ```
 site/                     <- everything in here is published as-is
-  index.html              About: photo, bio, research interests, links, news
-  publications.html       Publications grouped by year, with a search filter
-  materials.html          Talks, slides, posters, datasets, code
+  index.html              About: bio + recent updates
+  publications.html       Publications by year, filter by type/topic, search
+  talks.html              Invited talks + open-source code
   teaching.html           Courses
+  cv.html                 CV (rendered from data/cv.json)
   404.html
   css/style.css           One stylesheet, automatic light/dark mode
   js/main.js              Reads site/data/*.json and renders each page
   data/
-    profile.json          Name, position, bio, interests, email, links, CV path
-    news.json             [{ date, text }]
-    publications.json     [{ year, title, authors, venue, type, links:[{label,url}] }]
-    materials.json        [{ date, title, kind, description, file }]
-    teaching.json         [{ term, course, institution, role, url }]
-  files/                  PDFs: cv.pdf, papers, slides, posters…
-  img/                    profile.jpg, favicon.svg, other images
+    profile.json          Name, titles, bio, sidebar links, photo, optional CV PDF path
+    news.json             [{ date: "2025-11" | "2025", text }]
+    publications.json     [{ year, type, title, authors, venue, topics[], award?, links:[{label,url}] }]
+    talks.json            [{ date, title, venue, kind?, url? }]
+    software.json         [{ title, url }]
+    teaching.json         [{ term, course, institution, role, level? }]
+    cv.json               { sections: [{ title, items: [{ when, what, where?, note? }] }] }
+  files/                  PDFs (papers, slides, a public CV)
+  img/                    photo, favicon, icons/
 scripts/check.mjs         Validates JSON + referenced files (runs in CI before deploy)
 scripts/serve.mjs         Zero-dependency local preview server
 .github/workflows/        GitHub Actions: check, then publish site/ to Pages
@@ -32,7 +35,7 @@ scripts/serve.mjs         Zero-dependency local preview server
 
 ## Updating content
 
-1. Edit the relevant JSON file in `site/data/`.
+1. Edit the relevant JSON file in `site/data/`. Text fields support **bold**, *italic* and [links](https://example.com) using Markdown syntax.
 2. Drop any PDF / image into `site/files/` or `site/img/`, and reference it by relative path (e.g. `"files/talk-2026.pdf"`).
 3. Preview locally: `npm run dev` then open http://localhost:8000
 4. Commit and push to `main`. GitHub Actions checks the content and publishes it; the site updates in about a minute. Progress is visible under the repo's **Actions** tab.
@@ -60,11 +63,11 @@ In the repo on GitHub: **Settings → Pages → Build and deployment → Source:
 - JSON-driven content, responsive layout, light/dark mode, search filter on publications.
 - Push-to-deploy via GitHub Actions with content validation.
 
-**Phase 2: real content (Ella)**
-- Fill in `profile.json` (position, affiliation, bio, interests, email, links).
-- Add `img/profile.jpg` (square, ≥ 440×440) and `files/cv.pdf`.
-- Enter publications, talks, and teaching; upload the PDFs.
-- Remove the `TODO` placeholders and example entries.
+**Phase 2: real content (done, from Ella's CVs)**
+- Bio, 52 publications with ACL Anthology / arXiv / DOI / code links, talks, teaching, CV page.
+- Still needed from Ella: a professional photo (`img/profile.jpg`, square, ≥ 400×400, then set `"photo"` in `profile.json`),
+  her Google Scholar profile URL, and review of the bio wording and topic tags.
+- A downloadable CV PDF only if it has no home address / phone number (set `"cv": "files/cv.pdf"`).
 
 **Phase 3: polish & launch**
 - Open Graph / social preview image and meta tags.

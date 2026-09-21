@@ -3,32 +3,41 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Teaching — Ella Rabinovich</title>
+  <title>Teaching | Ella Rabinovich</title>
   <meta name="description" content="Teaching by Ella Rabinovich.">
+  <meta property="og:title" content="Teaching | Ella Rabinovich">
+  <meta property="og:description" content="Teaching by Ella Rabinovich.">
+  <meta property="og:type" content="website">
   <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/main.js" type="module"></script>
 </head>
 <body data-page="teaching">
-  <header class="site-header">
-    <a class="brand" href="./">Ella Rabinovich</a>
-    <nav>
-      <a href="./">About</a>
-      <a href="publications.html">Publications</a>
-      <a href="materials.html">Talks &amp; Materials</a>
-      <a href="teaching.html" aria-current="page">Teaching</a>
-      <a href="files/cv.pdf" data-bind-href="cv">CV</a>
-    </nav>
+  <a class="skip" href="#content">Skip to content</a>
+  <header class="masthead">
+    <div class="masthead-inner">
+      <a class="brand" href="./">Ella Rabinovich</a>
+      <nav aria-label="Main">
+        <a href="./">About</a>
+        <a href="publications.html">Publications</a>
+        <a href="talks.html">Talks &amp; Code</a>
+        <a href="teaching.html" aria-current="page">Teaching</a>
+        <a href="cv.html">CV</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <h1>Teaching</h1>
-    <ul id="teaching" class="plain-list"></ul>
-  </main>
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" aria-label="Profile"></aside>
+    <main id="content">
+    <h1 class="page-title">Teaching</h1>
+    <ul id="teaching" class="plain"></ul>
+    </main>
+  </div>
 
   <footer class="site-footer">
     <span>© <span id="year"></span> Ella Rabinovich</span>
-    <a id="email" href="#"></a>
+    <span class="muted">Last updated <span id="updated"></span></span>
   </footer>
 </body>
 </html>

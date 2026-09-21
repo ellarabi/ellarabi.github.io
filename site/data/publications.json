@@ -1,13 +1,906 @@
 [
   {
     "year": 2026,
-    "title": "TODO: Example Paper Title",
-    "authors": "Ella Rabinovich, Co-Author One, Co-Author Two",
-    "venue": "TODO: Conference or Journal",
-    "type": "conference",
+    "type": "journal",
+    "title": "Beyond the Pipeline: A Gender Lens on Priorities and Exit Triggers in the High-Tech Industry",
+    "authors": "Amit Kaplan, Dalit Naor, Ella Rabinovich, Iris Rahav, Adi Sharaibman",
+    "venue": "Communications of the ACM",
+    "topics": [
+      "Computational social science"
+    ],
     "links": [
-      { "label": "PDF", "url": "files/example-paper.pdf" },
-      { "label": "DOI", "url": "https://doi.org/" }
+      {
+        "label": "DOI",
+        "url": "https://doi.org/10.1145/3793870"
+      }
+    ]
+  },
+  {
+    "year": 2025,
+    "type": "journal",
+    "title": "Unveiling Polarization Trends in Parliamentary Proceedings",
+    "authors": "Gili Goldin, Ella Rabinovich, Shuly Wintner",
+    "venue": "Computational Linguistics",
+    "topics": [
+      "Computational social science"
+    ],
+    "links": [
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2512.05231"
+      }
+    ]
+  },
+  {
+    "year": 2025,
+    "type": "journal",
+    "title": "The Knesset Corpus: An Annotated Corpus of Hebrew Parliamentary Proceedings",
+    "authors": "Gili Goldin, Nick Howell, Noam Ordan, Ella Rabinovich, Shuly Wintner",
+    "venue": "Language Resources and Evaluation",
+    "topics": [
+      "Computational social science"
+    ],
+    "links": [
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2405.18115"
+      }
+    ]
+  },
+  {
+    "year": 2021,
+    "type": "journal",
+    "title": "Quantifying Cognitive Factors in Lexical Decline",
+    "authors": "David Francis, Ella Rabinovich, Farhan Samir, David Mortensen, Suzanne Stevenson",
+    "venue": "Transactions of the Association for Computational Linguistics (TACL)",
+    "topics": [
+      "Lexical semantics"
+    ],
+    "links": [
+      {
+        "label": "PDF",
+        "url": "https://aclanthology.org/2021.tacl-1.91.pdf"
+      },
+      {
+        "label": "Code",
+        "url": "https://github.com/ellarabi/linguistic_neology_decline"
+      }
+    ]
+  },
+  {
+    "year": 2021,
+    "type": "journal",
+    "title": "An Autonomous Debating System",
+    "authors": "Noam Slonim, Yonatan Bilu, Carlos Alzate, … Ella Rabinovich, … Ranit Aharonov (IBM Project Debater team)",
+    "venue": "Nature 591, 379–384",
+    "topics": [
+      "Argument mining"
+    ],
+    "links": [
+      {
+        "label": "DOI",
+        "url": "https://doi.org/10.1038/s41586-021-03215-w"
+      }
+    ]
+  },
+  {
+    "year": 2018,
+    "type": "journal",
+    "title": "Native Language Cognate Effects on Second Language Lexical Choice",
+    "authors": "Ella Rabinovich, Yulia Tsvetkov, Shuly Wintner",
+    "venue": "Transactions of the Association for Computational Linguistics (TACL)",
+    "topics": [
+      "Multilingualism & translation"
+    ],
+    "links": [
+      {
+        "label": "PDF",
+        "url": "https://aclanthology.org/Q18-1024.pdf"
+      },
+      {
+        "label": "Code",
+        "url": "https://github.com/ellarabi/reddit-l2"
+      }
+    ]
+  },
+  {
+    "year": 2015,
+    "type": "journal",
+    "title": "Unsupervised Identification of Translationese",
+    "authors": "Ella Rabinovich, Shuly Wintner",
+    "venue": "Transactions of the Association for Computational Linguistics (TACL)",
+    "topics": [
+      "Multilingualism & translation"
+    ],
+    "links": [
+      {
+        "label": "PDF",
+        "url": "https://aclanthology.org/Q15-1030.pdf"
+      }
+    ]
+  },
+  {
+    "year": 2008,
+    "type": "journal",
+    "title": "Generating Real-Time Complex Event-Processing Applications",
+    "authors": "Yonit Magid, D. Oren, David Botzer, Asaf Adi, Boris Shulman, Ella Rabinovich, Maya Barnea",
+    "venue": "IBM Systems Journal",
+    "topics": [
+      "Event processing"
+    ],
+    "links": [
+      {
+        "label": "DOI",
+        "url": "https://doi.org/10.1147/sj.472.0251"
+      }
+    ]
+  },
+  {
+    "year": 2025,
+    "type": "conference",
+    "title": "Towards Enforcing Company Policy Adherence in Agentic Workflows",
+    "authors": "Naama Zwerdling, David Boaz, Ella Rabinovich, Guy Uziel, David Amid, Ateret Anaby-Tavor",
+    "venue": "EMNLP (Industry Track)",
+    "topics": [
+      "LLMs & agents"
+    ],
+    "links": [
+      {
+        "label": "PDF",
+        "url": "https://aclanthology.org/2025.emnlp-industry.41.pdf"
+      },
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2507.16459"
+      }
+    ]
+  },
+  {
+    "year": 2025,
+    "type": "conference",
+    "title": "An Annotation Scheme for Factuality and its Application to Parliamentary Proceedings",
+    "authors": "Gili Goldin, Shira Wigderson, Ella Rabinovich, Shuly Wintner",
+    "venue": "RANLP",
+    "topics": [
+      "Computational social science"
+    ],
+    "links": [
+      {
+        "label": "PDF",
+        "url": "https://aclanthology.org/2025.ranlp-1.49.pdf"
+      },
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2509.26406"
+      }
+    ]
+  },
+  {
+    "year": 2024,
+    "type": "conference",
+    "title": "A Novel Metric for Measuring the Robustness of Large Language Models in Non-adversarial Scenarios",
+    "authors": "Samuel Ackerman, Ella Rabinovich, Eitan Farchi, Ateret Anaby-Tavor",
+    "venue": "Findings of EMNLP",
+    "topics": [
+      "LLMs & agents"
+    ],
+    "links": [
+      {
+        "label": "PDF",
+        "url": "https://aclanthology.org/2024.findings-emnlp.158.pdf"
+      },
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2408.01963"
+      }
+    ]
+  },
+  {
+    "year": 2024,
+    "type": "conference",
+    "title": "That’s Optional: A Contemporary Exploration of “that” Omission in English Subordinate Clauses",
+    "authors": "Ella Rabinovich",
+    "venue": "ACL",
+    "topics": [
+      "Lexical semantics"
+    ],
+    "links": [
+      {
+        "label": "PDF",
+        "url": "https://aclanthology.org/2024.acl-short.36.pdf"
+      },
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2405.20833"
+      }
+    ]
+  },
+  {
+    "year": 2023,
+    "type": "conference",
+    "title": "Reliable and Interpretable Drift Detection in Streams of Short Texts",
+    "authors": "Ella Rabinovich, Matan Vetzler, Samuel Ackerman, Ateret Anaby-Tavor",
+    "venue": "ACL (Industry Track)",
+    "topics": [
+      "Conversational AI"
+    ],
+    "links": [
+      {
+        "label": "PDF",
+        "url": "https://aclanthology.org/2023.acl-industry.42.pdf"
+      },
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2305.17750"
+      }
+    ]
+  },
+  {
+    "year": 2022,
+    "type": "conference",
+    "title": "Gaining Insights into Unrecognized User Utterances in Task-Oriented Dialog Systems",
+    "authors": "Ella Rabinovich, Matan Vetzler, David Boaz, Vineet Kumar, Gaurav Pandey, Ateret Anaby-Tavor",
+    "venue": "EMNLP (Industry Track)",
+    "topics": [
+      "Conversational AI"
+    ],
+    "links": [
+      {
+        "label": "PDF",
+        "url": "https://aclanthology.org/2022.emnlp-industry.22.pdf"
+      },
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2204.05158"
+      }
+    ]
+  },
+  {
+    "year": 2022,
+    "type": "conference",
+    "title": "Exploration of the Usage of Color Terms by Color-blind Participants in Online Discussion Platforms",
+    "authors": "Ella Rabinovich, Boaz Carmeli",
+    "venue": "EMNLP",
+    "topics": [
+      "Computational social science",
+      "Lexical semantics"
+    ],
+    "links": [
+      {
+        "label": "PDF",
+        "url": "https://aclanthology.org/2022.emnlp-main.447.pdf"
+      },
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2210.11905"
+      }
+    ]
+  },
+  {
+    "year": 2021,
+    "type": "conference",
+    "title": "We’ve had this conversation before: A Novel Approach to Measuring Dialog Similarity",
+    "authors": "Ofer Lavi, Ella Rabinovich, Segev Shlomov, David Boaz, Inbal Ronen, Ateret Anaby-Tavor",
+    "venue": "EMNLP",
+    "topics": [
+      "Conversational AI"
+    ],
+    "links": [
+      {
+        "label": "PDF",
+        "url": "https://aclanthology.org/2021.emnlp-main.89.pdf"
+      },
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2110.05780"
+      }
+    ]
+  },
+  {
+    "year": 2020,
+    "type": "conference",
+    "title": "Pick a Fight or Bite your Tongue: Investigation of Gender Differences in Idiomatic Language Usage",
+    "authors": "Ella Rabinovich, Hila Gonen, Suzanne Stevenson",
+    "venue": "COLING",
+    "topics": [
+      "Computational social science"
+    ],
+    "links": [
+      {
+        "label": "PDF",
+        "url": "https://aclanthology.org/2020.coling-main.454.pdf"
+      },
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2011.00335"
+      }
+    ]
+  },
+  {
+    "year": 2020,
+    "type": "conference",
+    "title": "The Typology of Polysemy: A Multilingual Distributional Framework",
+    "authors": "Ella Rabinovich, Yang Xu, Suzanne Stevenson",
+    "venue": "CogSci",
+    "topics": [
+      "Lexical semantics",
+      "Multilingualism & translation"
+    ],
+    "links": [
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2006.01966"
+      }
+    ]
+  },
+  {
+    "year": 2020,
+    "type": "conference",
+    "title": "Where New Words Are Born: Distributional Semantic Analysis of Neologisms and Their Semantic Neighborhoods",
+    "authors": "Maria Ryskina, Ella Rabinovich, Taylor Berg-Kirkpatrick, David Mortensen, Yulia Tsvetkov",
+    "venue": "SCiL",
+    "topics": [
+      "Lexical semantics"
+    ],
+    "links": [
+      {
+        "label": "PDF",
+        "url": "https://aclanthology.org/2020.scil-1.43.pdf"
+      },
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2001.07740"
+      }
+    ]
+  },
+  {
+    "year": 2019,
+    "type": "conference",
+    "title": "Say Anything: Automatic Semantic Infelicity Detection in L2 English Indefinite Pronouns",
+    "authors": "Ella Rabinovich, Julia Watson, Barend Beekhuizen, Suzanne Stevenson",
+    "venue": "CoNLL",
+    "topics": [
+      "Multilingualism & translation"
+    ],
+    "award": "Best Paper Award for Research Inspired by Human Language Learning and Processing",
+    "links": [
+      {
+        "label": "PDF",
+        "url": "https://aclanthology.org/K19-1008.pdf"
+      },
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/1909.07928"
+      },
+      {
+        "label": "Code",
+        "url": "https://github.com/ellarabi/indefinite-pronouns"
+      }
+    ]
+  },
+  {
+    "year": 2019,
+    "type": "conference",
+    "title": "CodeSwitch-Reddit: Exploration of Written Multilingual Discourse in Online Discussion Forums",
+    "authors": "Ella Rabinovich, Masih Sultani, Suzanne Stevenson",
+    "venue": "EMNLP",
+    "topics": [
+      "Multilingualism & translation",
+      "Computational social science"
+    ],
+    "links": [
+      {
+        "label": "PDF",
+        "url": "https://aclanthology.org/D19-1484.pdf"
+      },
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/1908.11841"
+      },
+      {
+        "label": "Code",
+        "url": "https://github.com/ellarabi/CodeSwitch-Reddit"
+      }
+    ]
+  },
+  {
+    "year": 2018,
+    "type": "conference",
+    "title": "Learning Concept Abstractness Using Weak Supervision",
+    "authors": "Ella Rabinovich, Benjamin Sznajder, Artem Spector, Ilya Shnayderman, Ranit Aharonov, David Konopnicki, Noam Slonim",
+    "venue": "EMNLP",
+    "topics": [
+      "Lexical semantics",
+      "Argument mining"
+    ],
+    "links": [
+      {
+        "label": "PDF",
+        "url": "https://aclanthology.org/D18-1522.pdf"
+      },
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/1809.01285"
+      }
+    ]
+  },
+  {
+    "year": 2018,
+    "type": "conference",
+    "title": "Native Language Identification with User Generated Content",
+    "authors": "Gili Goldin, Ella Rabinovich, Shuly Wintner",
+    "venue": "EMNLP",
+    "topics": [
+      "Multilingualism & translation"
+    ],
+    "links": [
+      {
+        "label": "PDF",
+        "url": "https://aclanthology.org/D18-1395.pdf"
+      }
+    ]
+  },
+  {
+    "year": 2018,
+    "type": "conference",
+    "title": "As Stable As You Are: Re-ranking Search Results using Query-Drift Analysis",
+    "authors": "Haggai Roitman, Ella Rabinovich, Oren Sar-Shalom",
+    "venue": "ACM Hypertext and Social Media",
+    "topics": [
+      "Information retrieval"
+    ],
+    "links": []
+  },
+  {
+    "year": 2017,
+    "type": "conference",
+    "title": "Found in Translation: Reconstructing Phylogenetic Language Trees from Translations",
+    "authors": "Ella Rabinovich, Noam Ordan, Shuly Wintner",
+    "venue": "ACL",
+    "topics": [
+      "Multilingualism & translation"
+    ],
+    "links": [
+      {
+        "label": "PDF",
+        "url": "https://aclanthology.org/P17-1049.pdf"
+      },
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/1704.07146"
+      }
+    ]
+  },
+  {
+    "year": 2017,
+    "type": "conference",
+    "title": "Personalized Machine Translation: Preserving Original Author Traits",
+    "authors": "Ella Rabinovich, Shachar Mirkin, Raj Nath Patel, Lucia Specia, Shuly Wintner",
+    "venue": "EACL",
+    "topics": [
+      "Multilingualism & translation"
+    ],
+    "links": [
+      {
+        "label": "PDF",
+        "url": "https://aclanthology.org/E17-1101.pdf"
+      },
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/1610.05461"
+      }
+    ]
+  },
+  {
+    "year": 2016,
+    "type": "conference",
+    "title": "On the Similarities Between Native, Non-native and Translated Texts",
+    "authors": "Ella Rabinovich, Sergiu Nisioi, Noam Ordan, Shuly Wintner",
+    "venue": "ACL",
+    "topics": [
+      "Multilingualism & translation"
+    ],
+    "links": [
+      {
+        "label": "PDF",
+        "url": "https://aclanthology.org/P16-1176.pdf"
+      },
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/1609.03204"
+      }
+    ]
+  },
+  {
+    "year": 2016,
+    "type": "conference",
+    "title": "On the Retrieval of Wikipedia Articles Containing Claims on Controversial Topics",
+    "authors": "Haggai Roitman, Shay Hummel, Ella Rabinovich, Benjamin Sznajder, Noam Slonim, Ehud Aharoni",
+    "venue": "WWW (Companion Volume)",
+    "topics": [
+      "Information retrieval",
+      "Argument mining"
+    ],
+    "links": [
+      {
+        "label": "DOI",
+        "url": "https://doi.org/10.1145/2872518.2891115"
+      }
+    ]
+  },
+  {
+    "year": 2016,
+    "type": "conference",
+    "title": "A Probabilistic Fusion Framework",
+    "authors": "Yael Anava, Anna Shtok, Oren Kurland, Ella Rabinovich",
+    "venue": "CIKM",
+    "topics": [
+      "Information retrieval"
+    ],
+    "links": []
+  },
+  {
+    "year": 2016,
+    "type": "conference",
+    "title": "A Corpus of Native, Non-native and Translated Texts",
+    "authors": "Sergiu Nisioi, Ella Rabinovich, Liviu P. Dinu, Shuly Wintner",
+    "venue": "LREC",
+    "topics": [
+      "Multilingualism & translation"
+    ],
+    "links": [
+      {
+        "label": "PDF",
+        "url": "https://aclanthology.org/L16-1664.pdf"
+      }
+    ]
+  },
+  {
+    "year": 2015,
+    "type": "conference",
+    "title": "A Parallel Corpus of Translationese",
+    "authors": "Ella Rabinovich, Shuly Wintner, Ofek Luis Lewinsohn",
+    "venue": "CICLing",
+    "topics": [
+      "Multilingualism & translation"
+    ],
+    "links": [
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/1509.03611"
+      }
+    ]
+  },
+  {
+    "year": 2014,
+    "type": "conference",
+    "title": "Utilizing Relevance Feedback in Fusion-based Retrieval",
+    "authors": "Ella Rabinovich, Ofri Rom, Oren Kurland",
+    "venue": "SIGIR",
+    "topics": [
+      "Information retrieval"
+    ],
+    "links": [
+      {
+        "label": "DOI",
+        "url": "https://doi.org/10.1145/2600428.2609573"
+      }
+    ]
+  },
+  {
+    "year": 2014,
+    "type": "conference",
+    "title": "Pattern Rewriting Framework for Event Processing Optimization",
+    "authors": "Ella Rabinovich, Opher Etzion, Avigdor Gal",
+    "venue": "DEBS",
+    "topics": [
+      "Event processing"
+    ],
+    "links": []
+  },
+  {
+    "year": 2011,
+    "type": "conference",
+    "title": "Controlled English Language for Production and Event Processing Rules",
+    "authors": "Mark H. Linehan, Sylvain Dehors, Ella Rabinovich, Fabiana Fournier",
+    "venue": "DEBS",
+    "topics": [
+      "Event processing"
+    ],
+    "links": [
+      {
+        "label": "DOI",
+        "url": "https://doi.org/10.1145/2002259.2002281"
+      }
+    ]
+  },
+  {
+    "year": 2011,
+    "type": "conference",
+    "title": "Non Functional Properties of Event Processing",
+    "authors": "Opher Etzion, Ella Rabinovich, Inna Skarbovsky",
+    "venue": "DEBS",
+    "topics": [
+      "Event processing"
+    ],
+    "links": []
+  },
+  {
+    "year": 2010,
+    "type": "conference",
+    "title": "Industry Experience with the IBM Active Middleware Technology Complex Event Processing Engine",
+    "authors": "Yonit Magid, Guy Sharon, Sarit Arcushin, Idan Ben-Harrush, Ella Rabinovich",
+    "venue": "DEBS",
+    "topics": [
+      "Event processing"
+    ],
+    "links": []
+  },
+  {
+    "year": 2010,
+    "type": "conference",
+    "title": "Analyzing the Behavior of Event Processing Applications",
+    "authors": "Ella Rabinovich, Opher Etzion, Sitvanit Ruah, Sarit Archushin",
+    "venue": "DEBS",
+    "topics": [
+      "Event processing"
+    ],
+    "links": [
+      {
+        "label": "DOI",
+        "url": "https://doi.org/10.1145/1827418.1827465"
+      }
+    ]
+  },
+  {
+    "year": 2010,
+    "type": "conference",
+    "title": "Context Aware Computing and its Utilization in Event-based Systems",
+    "authors": "Opher Etzion, Yonit Magid, Ella Rabinovich, Inna Skarbovsky, Nir Zolotorevsky",
+    "venue": "DEBS",
+    "topics": [
+      "Event processing"
+    ],
+    "links": [
+      {
+        "label": "DOI",
+        "url": "https://doi.org/10.1145/1827418.1827470"
+      }
+    ]
+  },
+  {
+    "year": 2008,
+    "type": "conference",
+    "title": "Application Generation Framework for Real-Time Complex Event Processing",
+    "authors": "Yonit Magid, Asaf Adi, Maya Barnea, David Botzer, Ella Rabinovich",
+    "venue": "COMPSAC",
+    "topics": [
+      "Event processing"
+    ],
+    "links": [
+      {
+        "label": "DOI",
+        "url": "https://doi.org/10.1109/compsac.2008.146"
+      }
+    ]
+  },
+  {
+    "year": 2026,
+    "type": "workshop",
+    "title": "Near-Miss: Latent Policy Failure Detection in Agentic Workflows",
+    "authors": "Ella Rabinovich, David Boaz, Naama Zwerdling, Ateret Anaby-Tavor",
+    "venue": "GEM Workshop @ ACL",
+    "topics": [
+      "LLMs & agents"
+    ],
+    "links": [
+      {
+        "label": "PDF",
+        "url": "https://aclanthology.org/2026.gem-main.30.pdf"
+      },
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2603.29665"
+      }
+    ]
+  },
+  {
+    "year": 2025,
+    "type": "workshop",
+    "title": "On the Interplay between Musical Preferences and Personality through the Lens of Language",
+    "authors": "Eliran Shem-Tov, Ella Rabinovich",
+    "venue": "Identity-aware AI Workshop @ ECAI",
+    "topics": [
+      "Computational social science"
+    ],
+    "links": [
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2508.18208"
+      }
+    ]
+  },
+  {
+    "year": 2025,
+    "type": "workshop",
+    "title": "Who are you, ChatGPT? Personality and Demographic Style in LLM-Generated Content",
+    "authors": "Dana Sotto Porat, Ella Rabinovich",
+    "venue": "Identity-aware AI Workshop @ ECAI",
+    "topics": [
+      "LLMs & agents",
+      "Computational social science"
+    ],
+    "links": [
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2510.11434"
+      }
+    ]
+  },
+  {
+    "year": 2025,
+    "type": "workshop",
+    "title": "On the Robustness of Agentic Function Calling",
+    "authors": "Ella Rabinovich, Ateret Anaby-Tavor",
+    "venue": "TrustNLP Workshop @ NAACL",
+    "topics": [
+      "LLMs & agents"
+    ],
+    "links": [
+      {
+        "label": "PDF",
+        "url": "https://aclanthology.org/2025.trustnlp-main.20.pdf"
+      },
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2504.00914"
+      }
+    ]
+  },
+  {
+    "year": 2024,
+    "type": "workshop",
+    "title": "Automatic Extraction of Disease Risk Factors from Medical Publications",
+    "authors": "Maxim Rubchinsky, Ella Rabinovich, Adi Shraibman, Netanel Golan, Tali Sahar, Dorit Shweiki",
+    "venue": "BioNLP Workshop @ ACL",
+    "topics": [
+      "Biomedical NLP"
+    ],
+    "links": [
+      {
+        "label": "PDF",
+        "url": "https://aclanthology.org/2024.bionlp-1.38.pdf"
+      },
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2407.07373"
+      }
+    ]
+  },
+  {
+    "year": 2023,
+    "type": "workshop",
+    "title": "Predicting Question-Answering Performance of Large Language Models through Semantic Consistency",
+    "authors": "Ella Rabinovich, Samuel Ackerman, Orna Raz, Eitan Farchi, Ateret Anaby-Tavor",
+    "venue": "GEM Workshop @ EMNLP",
+    "topics": [
+      "LLMs & agents"
+    ],
+    "links": [
+      {
+        "label": "PDF",
+        "url": "https://aclanthology.org/2023.gem-1.12.pdf"
+      },
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2311.01152"
+      }
+    ]
+  },
+  {
+    "year": 2020,
+    "type": "workshop",
+    "title": "Exploration of Gender Differences in COVID-19 Discourse on Reddit",
+    "authors": "Jai Aggarwal, Ella Rabinovich, Suzanne Stevenson",
+    "venue": "NLP COVID-19 Workshop @ ACL",
+    "topics": [
+      "Computational social science"
+    ],
+    "links": [
+      {
+        "label": "PDF",
+        "url": "https://aclanthology.org/2020.nlpcovid19-acl.13.pdf"
+      },
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2008.05713"
+      }
+    ]
+  },
+  {
+    "year": 2014,
+    "type": "workshop",
+    "title": "PreMapper: Improving Entity Extraction Accuracy in the Digital Humanities",
+    "authors": "Cormac Hampson, Ella Rabinovich, Sara Porat, Maya Koleva, Ivan Uzunov, Owen Conlan",
+    "venue": "PATCH Workshop @ IUI",
+    "topics": [
+      "Digital humanities"
+    ],
+    "links": []
+  },
+  {
+    "year": 2014,
+    "type": "workshop",
+    "title": "Enhancing Digital Cultural Heritage Collections with Social Network Capabilities",
+    "authors": "Maristella Agosti, Nicola Ferro, Sara Porat, Ella Rabinovich",
+    "venue": "PATCH Workshop @ IUI",
+    "topics": [
+      "Digital humanities"
+    ],
+    "links": []
+  },
+  {
+    "year": 2026,
+    "type": "preprint",
+    "title": "When Words Divide: Diachronic Ideological Polarization in Political Discourse on Social Media",
+    "authors": "Roy Yitzchak, Noa Lavie, Ella Rabinovich",
+    "venue": "arXiv preprint (under review)",
+    "topics": [
+      "Computational social science"
+    ],
+    "links": [
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2608.01176"
+      }
+    ]
+  },
+  {
+    "year": 2022,
+    "type": "preprint",
+    "title": "High-quality Conversational Systems",
+    "authors": "Samuel Ackerman, Ateret Anaby-Tavor, Eitan Farchi, Esther Goldbraich, George Kour, Ella Rabinovich, Orna Raz, Saritha Route, Marcel Zalmanovici, Naama Zwerdling",
+    "venue": "arXiv preprint",
+    "topics": [
+      "Conversational AI"
+    ],
+    "links": [
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2204.13043"
+      }
+    ]
+  },
+  {
+    "year": 2019,
+    "type": "preprint",
+    "title": "Controversy in Context",
+    "authors": "Benjamin Sznajder, Ariel Gera, Yonatan Bilu, Dafna Sheinwald, Ella Rabinovich, Ranit Aharonov, David Konopnicki, Noam Slonim",
+    "venue": "arXiv preprint",
+    "topics": [
+      "Argument mining"
+    ],
+    "links": [
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/1908.07491"
+      }
+    ]
+  },
+  {
+    "year": 2018,
+    "type": "preprint",
+    "title": "The UN Parallel Corpus Annotated for Translation Direction",
+    "authors": "Elad Tolochinsky, Ohad Mosafi, Ella Rabinovich, Shuly Wintner",
+    "venue": "arXiv preprint",
+    "topics": [
+      "Multilingualism & translation"
+    ],
+    "links": [
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/1805.07697"
+      }
     ]
   }
 ]

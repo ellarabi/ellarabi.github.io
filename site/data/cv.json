@@ -1,0 +1,57 @@
+{
+  "sections": [
+    { "title": "Academic Positions", "items": [
+      { "when": "2022–present", "what": "Senior Lecturer, School of Computer Science", "where": "The Academic College of Tel Aviv-Yaffo (MTA)" },
+      { "when": "2024–present", "what": "Head of the Graduate Program, School of Computer Science", "where": "MTA" },
+      { "when": "2018–2020", "what": "Postdoctoral Research Fellow, Computational Linguistics", "where": "University of Toronto (host: Prof. Suzanne Stevenson)" }
+    ]},
+    { "title": "Industry Research", "items": [
+      { "when": "2020–present", "what": "Research Scientist, AI and Language", "where": "IBM Research" },
+      { "when": "2013–2018", "what": "Information Retrieval and Text Analysis (part-time)", "where": "IBM Research" },
+      { "when": "2008–2013", "what": "Research Staff Member, Event-driven Decision Technologies", "where": "IBM Research" },
+      { "when": "2003–2008", "what": "System-level Verification Technologies", "where": "IBM Research" }
+    ]},
+    { "title": "Education", "items": [
+      { "when": "2014–2018", "what": "Ph.D. in Computer Science", "where": "University of Haifa", "note": "Thesis: A Computational Approach to the Study of Bilingualism. Advisor: Prof. Shuly Wintner." },
+      { "when": "2008–2011", "what": "M.Sc. (cum laude), Information Management", "where": "Technion", "note": "Thesis: Pattern Rewriting for Complex Event Processing Optimization. Advisors: Prof. Opher Etzion, Prof. Avigdor Gal." },
+      { "when": "2002–2006", "what": "B.Sc. (cum laude), Computer Science", "where": "Technion" }
+    ]},
+    { "title": "Grants", "items": [
+      { "when": "2025", "what": "Israel Science Foundation (ISF) research grant, Co-PI (with Dr. Noa Nelson)", "where": "How do women and men talk to advance their careers? Computational analyses of employment negotiations and the effects of gender and power on conversation patterns." }
+    ]},
+    { "title": "Awards", "items": [
+      { "when": "2025", "what": "IBM Outstanding Research Accomplishment" },
+      { "when": "2022", "what": "IBM Corporate Technical Award", "where": "IBM's highest technical award" },
+      { "when": "2021", "what": "IBM Second Invention Plateau Award" },
+      { "when": "2019", "what": "Best Paper Award for Research Inspired by Human Language Learning and Processing", "where": "CoNLL 2019" },
+      { "when": "2018", "what": "Eric and Wendy Schmidt Israeli Women’s Postdoctoral Award" },
+      { "when": "2016, 2018", "what": "Uri N. Peled Memorial Prize", "where": "University of Haifa" },
+      { "when": "2016", "what": "Wolf Foundation Award", "where": "University of Haifa" },
+      { "when": "2008", "what": "IBM Research Accomplishment" }
+    ]},
+    { "title": "Service", "items": [
+      { "when": "2025", "what": "Panel moderator", "where": "ISCOL (Israeli Seminar on Computational Linguistics)" },
+      { "when": "2024", "what": "General Chair", "where": "ISCOL, University of Haifa" },
+      { "when": "2022–present", "what": "Lectures on Generative AI for high-school students", "where": "“Discovering Academia” program, MTA" },
+      { "when": "2017–present", "what": "Program committees", "where": "ARR, ACL, EMNLP, NAACL, EACL, CoNLL, AAAI, LREC, CogSci; workshops: LChange, SIGTYP, W-NUT" },
+      { "when": "2019–present", "what": "Journal reviewing", "where": "Computational Linguistics, TACL, Corpus Linguistics and Linguistic Theory" }
+    ]},
+    { "title": "Patents", "items": [
+      { "when": "2025", "what": "Intent suggestion recommendation for artificial intelligence systems" },
+      { "when": "2024", "what": "Message mapping and combination for intent classification" },
+      { "when": "2022", "what": "Reliable and interpretable drift detection in streams of short texts" },
+      { "when": "2021", "what": "Improving intent classification by mapping H2B to H2H requests" },
+      { "when": "2021", "what": "Generating sorted lists of chat bot design nodes using escalation logs" },
+      { "when": "2021", "what": "Automatic measurement of semantic similarity of conversations" },
+      { "when": "2019", "what": "Query performance prediction" },
+      { "when": "2018", "what": "Stability score based re-ranking of search results" },
+      { "when": "2017", "what": "A what-if analysis approach to query performance prediction" },
+      { "when": "2015", "what": "Generic term weighting based on query performance prediction" },
+      { "when": "2015", "what": "Verification of event processing applications using formal methods" },
+      { "when": "2015", "what": "Generating complex event processing rules" }
+    ]},
+    { "title": "Languages", "items": [
+      { "what": "Hebrew (native), Russian (native), English (fluent)" }
+    ]}
+  ]
+}

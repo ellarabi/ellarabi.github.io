@@ -1,0 +1,23 @@
+[
+  { "date": "2026-02", "title": "NLP: Industrial Research", "venue": "Department seminar, The Academic College of Tel Aviv-Yaffo" },
+  { "date": "2025-11", "title": "Introduction to Generative AI", "venue": "AI for Family Medicine Conference, Herzliya" },
+  { "date": "2025-03", "title": "Linguistic Economy: On the Patterns of Effective Communication", "venue": "Department seminar, The Academic College of Tel Aviv-Yaffo" },
+  { "date": "2024-04", "title": "Introduction to Neural Networks and Large Language Models", "venue": "Language Technologies Dept., IBM Research" },
+  { "date": "2023-06", "title": "AI Meets Natural Language: Between Myth and Reality", "venue": "Seminar on Education in the Era of AI, Afeka College" },
+  { "date": "2023-05", "title": "Semantic Typology in Action: Identification of Semantic Infelicities in L2 English Indefinite Pronouns", "venue": "SIGTYP Workshop @ EACL 2023, Dubrovnik, Croatia", "kind": "Keynote", "url": "https://sigtyp.github.io/workshop.html" },
+  { "date": "2023-02", "title": "Machine Learning Fundamentals", "venue": "Storage Dept., IBM Research" },
+  { "date": "2022-03", "title": "NLP Fundamentals", "venue": "Cyber and Security Dept. seminar, IBM Research" },
+  { "date": "2021-05", "title": "Pick a Fight or Bite your Tongue: Investigation of Gender Differences in Figurative Language Usage", "venue": "AI and Language Dept. seminar, IBM Research" },
+  { "date": "2020-05", "title": "Pick a Fight or Bite your Tongue: Investigation of Gender Differences in Figurative Language Usage", "venue": "CL colloquium, University of Toronto" },
+  { "date": "2020-04", "title": "Exploration of Gender Differences in COVID-19 Discourse on Reddit", "venue": "CL colloquium, University of Toronto" },
+  { "date": "2020-03", "title": "On Semantic Aspects in Second Language Acquisition", "venue": "CL seminar, Georgetown University" },
+  { "date": "2020-02", "title": "A Computational Approach to the Study of Bilingualism", "venue": "CS seminar, York University" },
+  { "date": "2019-10", "title": "Native Language Cognate Effects on Second Language Lexical Choice", "venue": "Invited lecture, University of Toronto" },
+  { "date": "2019-07", "title": "Say Anything: Automatic Semantic Infelicity Detection in L2 English Indefinite Pronouns", "venue": "AI and Language Dept. seminar, IBM Research" },
+  { "date": "2019-06", "title": "The Typology of Polysemy: A Multilingual Distributional Framework", "venue": "Invited talk, University of Toronto" },
+  { "date": "2019-06", "title": "A Computational Approach to the Study of Bilingualism", "venue": "CS seminar, Carnegie Mellon University" },
+  { "date": "2019-04", "title": "Say Anything: Automatic Semantic Infelicity Detection in L2 English Indefinite Pronouns", "venue": "CL colloquium, University of Toronto" },
+  { "date": "2018-10", "title": "A Computational Approach to the Study of Bilingualism", "venue": "CL colloquium, University of Toronto" },
+  { "date": "2018-05", "title": "A Computational Approach to the Study of Bilingualism", "venue": "CS colloquium, University of Haifa" },
+  { "date": "2011-11", "title": "Pattern Rewriting Framework for Complex Event Processing", "venue": "IE colloquium, Technion" }
+]

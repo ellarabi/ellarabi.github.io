@@ -1,3 +1,12 @@
 [
-  { "date": "2026-09-01", "text": "TODO: example news item — paper accepted, talk given, new position." }
+  { "date": "2026-02", "text": "Talk at the MTA Computer Science department seminar: *NLP: Industrial Research*." },
+  { "date": "2026", "text": "Paper accepted to **Communications of the ACM**: [Beyond the Pipeline: A Gender Lens on Priorities and Exit Triggers in the High-Tech Industry](https://doi.org/10.1145/3793870)." },
+  { "date": "2026", "text": "Paper accepted to the GEM workshop at ACL 2026: [Near-Miss: Latent Policy Failure Detection in Agentic Workflows](https://aclanthology.org/2026.gem-main.30.pdf)." },
+  { "date": "2025-12", "text": "Panel moderator at ISCOL 2025 (Israeli Seminar on Computational Linguistics), Bar-Ilan University." },
+  { "date": "2025-11", "text": "Invited talk, *Introduction to Generative AI*, at the AI for Family Medicine conference, Herzliya." },
+  { "date": "2025", "text": "Awarded an **ISF research grant** (with Dr. Noa Nelson) to study gender and power in employment negotiations using computational methods." },
+  { "date": "2025", "text": "Received the **IBM Outstanding Research Accomplishment** award." },
+  { "date": "2025", "text": "Paper at **EMNLP 2025** (Industry Track): [Towards Enforcing Company Policy Adherence in Agentic Workflows](https://aclanthology.org/2025.emnlp-industry.41.pdf)." },
+  { "date": "2024-10", "text": "Appointed head of the graduate program at the School of Computer Science, MTA." },
+  { "date": "2024-09", "text": "General chair of ISCOL 2024 at the University of Haifa." }
 ]
