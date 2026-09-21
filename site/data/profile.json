@@ -12,7 +12,6 @@
   ],
   "interests": ["Natural Language Processing", "LLM Reliability & Agents", "Computational Social Science", "Multilingualism", "Information Retrieval"],
   "email": "ellara@mta.ac.il",
-  "cv": "",
   "links": [
     { "label": "Email", "icon": "email", "url": "mailto:ellara@mta.ac.il" },
     { "label": "Google Scholar", "icon": "googlescholar", "url": "https://scholar.google.com/scholar?q=%22Ella+Rabinovich%22" },

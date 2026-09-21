@@ -1,7 +1,7 @@
 [
   { "term": "2022–present", "course": "Natural Language Processing", "institution": "The Academic College of Tel Aviv-Yaffo", "role": "Lecturer", "level": "Advanced course, undergraduate and graduate" },
-  { "term": "2025–26", "course": "Graduate Seminar", "institution": "The Academic College of Tel Aviv-Yaffo", "role": "Lecturer", "level": "Graduate" },
-  { "term": "2023–2025", "course": "Data Science with Python", "institution": "The Academic College of Tel Aviv-Yaffo", "role": "Lecturer", "level": "Undergraduate" },
+  { "term": "2025–present", "course": "Graduate Research Seminar", "institution": "The Academic College of Tel Aviv-Yaffo", "role": "Lecturer", "level": "Graduate" },
+  { "term": "2023–present", "course": "Introduction to Machine Learning and Data Science", "institution": "The Academic College of Tel Aviv-Yaffo", "role": "Lecturer", "level": "Undergraduate" },
   { "term": "2017, 2018", "course": "Natural Language Processing", "institution": "University of Haifa", "role": "Teaching Assistant" },
   { "term": "2010", "course": "Database Systems Engineering", "institution": "Technion", "role": "Teaching Assistant" }
 ]

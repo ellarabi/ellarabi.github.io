@@ -4,7 +4,6 @@
 // Text fields support a tiny Markdown subset: **bold**, *italic*, [label](url).
 
 const OWNER = 'Ella Rabinovich'; // bolded in author lists
-const NEWS_LIMIT = 8;            // updates shown on the home page before "Show all"
 
 const loadJSON = async (name) => {
   const res = await fetch(`data/${name}.json`, { cache: 'no-cache' });
@@ -73,7 +72,6 @@ function renderSidebar(p) {
     : el('div', { class: 'avatar avatar-initials', 'aria-hidden': 'true' }, initials);
 
   const links = [...(p.links || [])];
-  if (p.cv) links.push({ label: 'CV (PDF)', icon: 'cv', url: p.cv });
 
   side.replaceChildren(
     avatar,
@@ -94,23 +92,9 @@ function bindProfile(p) {
 
 // ---------- Pages ----------
 
-function renderHome(p, news) {
+function renderHome(p) {
   document.getElementById('bio').replaceChildren(...(p.bio || []).map((t) => el('p', {}, ...rich(t))));
-
-  const table = document.getElementById('news');
-  const toggle = document.getElementById('news-toggle');
-  const sorted = [...news].sort(byDateDesc);
-  const draw = (all) => table.replaceChildren(
-    ...(all ? sorted : sorted.slice(0, NEWS_LIMIT)).map((n) =>
-      el('tr', {}, el('th', { scope: 'row' }, formatDate(n.date)), el('td', {}, ...rich(n.text)))));
-  draw(false);
-  if (sorted.length > NEWS_LIMIT) {
-    toggle.hidden = false;
-    toggle.addEventListener('click', () => { draw(true); toggle.hidden = true; });
-  }
 }
-
-const TYPE_LABELS = { journal: 'Journal', conference: 'Conference', workshop: 'Workshop', preprint: 'Preprint' };
 
 function authorsNode(authors) {
   const parts = authors.split(OWNER);
@@ -118,63 +102,24 @@ function authorsNode(authors) {
 }
 
 function renderPublications(pubs) {
-  const root = document.getElementById('publications');
-  const search = document.getElementById('filter');
-  const filters = document.getElementById('filters');
-  const count = document.getElementById('pub-count');
-
-  // Filter chips: publication types, then research topics (from the data).
-  const types = Object.keys(TYPE_LABELS).filter((t) => pubs.some((p) => p.type === t));
-  const topicCounts = new Map();
-  pubs.forEach((p) => (p.topics || []).forEach((t) => topicCounts.set(t, (topicCounts.get(t) || 0) + 1)));
-  const topics = [...topicCounts.keys()].sort((a, b) => topicCounts.get(b) - topicCounts.get(a));
-
-  let active = { kind: 'all', value: null };
-  const chip = (label, kind, value, cls = '') =>
-    el('button', { type: 'button', class: `chip ${cls}`, 'data-kind': kind, 'data-value': value ?? '', onclick: () => { active = { kind, value }; draw(); } }, label);
-
-  filters.replaceChildren(
-    chip('All', 'all', null),
-    ...types.map((t) => chip(TYPE_LABELS[t], 'type', t, `t-${t}`)),
-    el('span', { class: 'chip-sep', 'aria-hidden': 'true' }),
-    ...topics.map((t) => chip(t, 'topic', t, 'topic')),
+  const years = [...new Set(pubs.map((p) => p.year))].sort((a, b) => b - a);
+  document.getElementById('publications').replaceChildren(
+    ...years.map((y) => el('section', { class: 'year' },
+      el('h2', {}, y),
+      el('ul', { class: 'pubs' },
+        ...pubs.filter((p) => p.year === y).map((p) =>
+          el('li', {},
+            el('div', { class: 'pub-title' }, p.title),
+            el('div', { class: 'pub-authors' }, ...authorsNode(p.authors)),
+            el('div', { class: 'pub-venue' }, p.venue, `, ${p.year}`),
+            p.award ? el('div', { class: 'pub-award' }, '🏆 ', p.award) : null,
+            (p.links || []).length
+              ? el('div', { class: 'pub-links' }, ...p.links.map((l) => link(l.label, l.url, 'badge badge-link')))
+              : null))))),
   );
-
-  const draw = () => {
-    filters.querySelectorAll('.chip').forEach((b) =>
-      b.setAttribute('aria-pressed', String(b.dataset.kind === active.kind && (b.dataset.value || null) === active.value)));
-
-    const q = search.value.trim().toLowerCase();
-    const shown = pubs.filter((p) =>
-      (active.kind === 'all'
-        || (active.kind === 'type' && p.type === active.value)
-        || (active.kind === 'topic' && (p.topics || []).includes(active.value)))
-      && (!q || [p.title, p.authors, p.venue, p.year].join(' ').toLowerCase().includes(q)));
-
-    count.textContent = `${shown.length} of ${pubs.length} publications`;
-    const years = [...new Set(shown.map((p) => p.year))].sort((a, b) => b - a);
-    root.replaceChildren(
-      ...years.map((y) => el('section', { class: 'year' },
-        el('h2', {}, y),
-        el('ul', { class: 'pubs' },
-          ...shown.filter((p) => p.year === y).map((p) =>
-            el('li', {},
-              el('div', { class: 'pub-title' }, p.title),
-              el('div', { class: 'pub-authors' }, ...authorsNode(p.authors)),
-              el('div', { class: 'pub-venue' }, p.venue, `, ${p.year}`),
-              p.award ? el('div', { class: 'pub-award' }, '🏆 ', p.award) : null,
-              el('div', { class: 'pub-links' },
-                el('span', { class: `badge t-${p.type}` }, TYPE_LABELS[p.type] || p.type),
-                ...(p.links || []).map((l) => link(l.label, l.url, 'badge badge-link')))))))),
-    );
-    if (!shown.length) root.replaceChildren(el('p', { class: 'muted' }, 'No matching publications.'));
-  };
-
-  search.addEventListener('input', draw);
-  draw();
 }
 
-function renderTalks(talks, software) {
+function renderTalks(talks) {
   document.getElementById('talks').replaceChildren(
     ...[...talks].sort(byDateDesc).map((t) =>
       el('tr', {},
@@ -183,9 +128,6 @@ function renderTalks(talks, software) {
           t.kind ? el('span', { class: 'badge t-keynote' }, t.kind) : null,
           t.url ? link(t.title, t.url) : el('span', { class: 'talk-title' }, t.title),
           el('div', { class: 'muted' }, t.venue)))));
-
-  document.getElementById('software').replaceChildren(
-    ...software.map((s) => el('li', {}, icon('github'), ' ', link(s.title, s.url))));
 }
 
 function renderTeaching(items) {
@@ -196,20 +138,6 @@ function renderTeaching(items) {
         el('div', {},
           el('div', { class: 'pub-title' }, t.url ? link(t.course, t.url) : t.course),
           el('div', { class: 'muted' }, [t.role, t.institution, t.level].filter(Boolean).join(' · '))))));
-}
-
-function renderCV(cv, profile) {
-  if (profile.cv) document.getElementById('cv-download').hidden = false;
-  document.getElementById('cv').replaceChildren(
-    ...cv.sections.map((s) => el('section', {},
-      el('h2', {}, s.title),
-      el('ul', { class: 'plain' },
-        ...s.items.map((i) => el('li', { class: 'row' },
-          el('div', { class: 'when' }, i.when || ''),
-          el('div', {},
-            el('div', { class: 'cv-what' }, ...rich(i.what)),
-            i.where ? el('div', { class: 'muted' }, ...rich(i.where)) : null,
-            i.note ? el('div', { class: 'small' }, ...rich(i.note)) : null)))))));
 }
 
 // ---------- Boot ----------
@@ -225,11 +153,10 @@ async function main() {
     const profile = await loadJSON('profile');
     renderSidebar(profile);
     bindProfile(profile);
-    if (page === 'home') renderHome(profile, await loadJSON('news'));
+    if (page === 'home') renderHome(profile);
     if (page === 'publications') renderPublications(await loadJSON('publications'));
-    if (page === 'talks') renderTalks(await loadJSON('talks'), await loadJSON('software'));
+    if (page === 'talks') renderTalks(await loadJSON('talks'));
     if (page === 'teaching') renderTeaching(await loadJSON('teaching'));
-    if (page === 'cv') renderCV(await loadJSON('cv'), profile);
   } catch (err) {
     console.error(err);
     document.querySelector('main')?.append(el('p', { class: 'error' }, 'Could not load content. Please try again later.'));
