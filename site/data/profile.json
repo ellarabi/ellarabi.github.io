@@ -1,0 +1,19 @@
+{
+  "name": "Ella Rabinovich",
+  "title": "Ph.D.",
+  "position": "TODO: position / role",
+  "affiliation": "TODO: institution",
+  "photo": "img/profile.jpg",
+  "bio": [
+    "TODO: a short bio paragraph — research focus, background, current role.",
+    "TODO: optional second paragraph — interests, collaborations, what you are looking for."
+  ],
+  "interests": ["TODO interest 1", "TODO interest 2", "TODO interest 3"],
+  "email": "TODO@example.com",
+  "cv": "files/cv.pdf",
+  "links": [
+    { "label": "Google Scholar", "url": "https://scholar.google.com/" },
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/" },
+    { "label": "GitHub", "url": "https://github.com/" }
+  ]
+}

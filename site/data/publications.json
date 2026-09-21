@@ -1,0 +1,13 @@
+[
+  {
+    "year": 2026,
+    "title": "TODO: Example Paper Title",
+    "authors": "Ella Rabinovich, Co-Author One, Co-Author Two",
+    "venue": "TODO: Conference or Journal",
+    "type": "conference",
+    "links": [
+      { "label": "PDF", "url": "files/example-paper.pdf" },
+      { "label": "DOI", "url": "https://doi.org/" }
+    ]
+  }
+]

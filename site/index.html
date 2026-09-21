@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ella Rabinovich, Ph.D.</title>
+  <meta name="description" content="Ella Rabinovich, Ph.D. — research, publications, talks and materials.">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" type="module"></script>
+</head>
+<body data-page="home">
+  <header class="site-header">
+    <a class="brand" href="./">Ella Rabinovich</a>
+    <nav>
+      <a href="./" aria-current="page">About</a>
+      <a href="publications.html">Publications</a>
+      <a href="materials.html">Talks &amp; Materials</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="files/cv.pdf" data-bind-href="cv">CV</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <img class="portrait" data-bind-src="photo" src="img/profile.jpg" alt="Portrait of Ella Rabinovich" width="220" height="220" onerror="this.hidden=true">
+      <div>
+        <h1><span data-bind="name">Ella Rabinovich</span><span class="suffix">, <span data-bind="title">Ph.D.</span></span></h1>
+        <p class="role"><span data-bind="position"></span> · <span data-bind="affiliation"></span></p>
+        <div id="bio" class="bio"></div>
+        <ul id="interests" class="tags"></ul>
+        <p id="links" class="links"></p>
+      </div>
+    </section>
+
+    <section>
+      <h2>News</h2>
+      <ul id="news" class="news"></ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>© <span id="year"></span> Ella Rabinovich</span>
+    <a id="email" href="#"></a>
+  </footer>
+</body>
+</html>
