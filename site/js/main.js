@@ -96,27 +96,57 @@ function renderHome(p) {
   document.getElementById('bio').replaceChildren(...(p.bio || []).map((t) => el('p', {}, ...rich(t))));
 }
 
+const TYPE_LABELS = { journal: 'Journal', conference: 'Conference', workshop: 'Workshop', preprint: 'Preprint' };
+
 function authorsNode(authors) {
   const parts = authors.split(OWNER);
   return parts.flatMap((s, i) => (i ? [el('strong', {}, OWNER), s] : [s]));
 }
 
 function renderPublications(pubs) {
-  const years = [...new Set(pubs.map((p) => p.year))].sort((a, b) => b - a);
-  document.getElementById('publications').replaceChildren(
-    ...years.map((y) => el('section', { class: 'year' },
-      el('h2', {}, y),
-      el('ul', { class: 'pubs' },
-        ...pubs.filter((p) => p.year === y).map((p) =>
-          el('li', {},
-            el('div', { class: 'pub-title' }, p.title),
-            el('div', { class: 'pub-authors' }, ...authorsNode(p.authors)),
-            el('div', { class: 'pub-venue' }, p.venue, `, ${p.year}`),
-            p.award ? el('div', { class: 'pub-award' }, '🏆 ', p.award) : null,
-            (p.links || []).length
-              ? el('div', { class: 'pub-links' }, ...p.links.map((l) => link(l.label, l.url, 'badge badge-link')))
-              : null))))),
-  );
+  const root = document.getElementById('publications');
+  const search = document.getElementById('filter');
+  const filters = document.getElementById('filters');
+  const count = document.getElementById('pub-count');
+
+  // Filter chips: publication types present in the data.
+  const types = Object.keys(TYPE_LABELS).filter((t) => pubs.some((p) => p.type === t));
+  let active = null; // null = all types
+  const chip = (label, value, cls = '') =>
+    el('button', { type: 'button', class: `chip ${cls}`, 'data-value': value ?? '', onclick: () => { active = value; draw(); } }, label);
+
+  filters.replaceChildren(chip('All', null), ...types.map((t) => chip(TYPE_LABELS[t], t, `t-${t}`)));
+
+  const draw = () => {
+    filters.querySelectorAll('.chip').forEach((b) =>
+      b.setAttribute('aria-pressed', String((b.dataset.value || null) === active)));
+
+    const q = search.value.trim().toLowerCase();
+    const shown = pubs.filter((p) =>
+      (!active || p.type === active)
+      && (!q || [p.title, p.authors, p.venue, p.year].join(' ').toLowerCase().includes(q)));
+
+    count.textContent = `${shown.length} of ${pubs.length} publications`;
+    const years = [...new Set(shown.map((p) => p.year))].sort((a, b) => b - a);
+    root.replaceChildren(
+      ...years.map((y) => el('section', { class: 'year' },
+        el('h2', {}, y),
+        el('ul', { class: 'pubs' },
+          ...shown.filter((p) => p.year === y).map((p) =>
+            el('li', {},
+              el('div', { class: 'pub-title' }, p.title),
+              el('div', { class: 'pub-authors' }, ...authorsNode(p.authors)),
+              el('div', { class: 'pub-venue' }, p.venue, `, ${p.year}`),
+              p.award ? el('div', { class: 'pub-award' }, '🏆 ', p.award) : null,
+              el('div', { class: 'pub-links' },
+                el('span', { class: `badge t-${p.type}` }, TYPE_LABELS[p.type] || p.type),
+                ...(p.links || []).map((l) => link(l.label, l.url, 'badge badge-link')))))))),
+    );
+    if (!shown.length) root.replaceChildren(el('p', { class: 'muted' }, 'No matching publications.'));
+  };
+
+  search.addEventListener('input', draw);
+  draw();
 }
 
 function renderTalks(talks) {

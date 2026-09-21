@@ -27,6 +27,10 @@ jobs:
           node-version: 22
       - name: Check content
         run: node scripts/check.mjs
+      # GitHub Pages caches every file for 10 minutes; stamping the commit into
+      # the CSS/JS URLs makes browsers fetch fresh copies after each deploy.
+      - name: Cache-bust assets
+        run: sed -i -E "s#(css/style\.css|js/main\.js)\"#\1?v=${GITHUB_SHA::7}\"#g" site/*.html
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

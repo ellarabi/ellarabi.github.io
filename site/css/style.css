@@ -12,7 +12,11 @@
   --accent-soft: #e8f0f8;
   --award: #8a5a00;
 
-  /* talk badge colour */
+  /* publication type colours */
+  --t-journal: #332288;
+  --t-conference: #117733;
+  --t-workshop: #1f7a8c;
+  --t-preprint: #6b7178;
   --t-keynote: #882255;
 
   --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -30,6 +34,10 @@
     --accent: #7ab4ea;
     --accent-soft: #1d2a38;
     --award: #e0b050;
+    --t-journal: #8f84d8;
+    --t-conference: #5cb87a;
+    --t-workshop: #58b4c6;
+    --t-preprint: #9aa1a9;
     --t-keynote: #d77aa6;
   }
 }
@@ -127,6 +135,30 @@ main { min-width: 0; max-width: 760px; }
 .news tr + tr > * { border-top: 1px solid var(--soft); }
 
 /* ---------- publications ---------- */
+.filters { display: flex; flex-wrap: wrap; gap: .4rem; margin: 1rem 0 .8rem; align-items: center; }
+.chip {
+  font: inherit; font-size: .85rem; cursor: pointer;
+  padding: .2rem .75rem; border-radius: 999px;
+  border: 1px solid var(--line); background: var(--bg); color: var(--fg);
+}
+.chip:hover { border-color: var(--accent); }
+.chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+.chip[class*="t-"]::before {
+  content: ""; display: inline-block; width: .55em; height: .55em; border-radius: 50%;
+  margin-right: .45em; vertical-align: .05em; background: var(--dot);
+}
+.chip.t-journal { --dot: var(--t-journal); }
+.chip.t-conference { --dot: var(--t-conference); }
+.chip.t-workshop { --dot: var(--t-workshop); }
+.chip.t-preprint { --dot: var(--t-preprint); }
+.chip[aria-pressed="true"]::before { background: currentColor; }
+
+.search {
+  width: 100%; padding: .5rem .8rem; font: inherit; color: var(--fg);
+  background: var(--bg); border: 1px solid var(--line); border-radius: 6px;
+}
+.search:focus { outline: 2px solid var(--accent-soft); border-color: var(--accent); }
+
 .year h2 { font-size: 1.1rem; margin-top: 1.8rem; }
 .pubs { list-style: none; margin: 0; padding: 0; }
 .pubs li { padding: .7rem 0; }
@@ -141,6 +173,10 @@ main { min-width: 0; max-width: 760px; }
   display: inline-block; font-size: .72rem; font-weight: 600; letter-spacing: .03em; text-transform: uppercase;
   padding: .1rem .5rem; border-radius: 4px; color: #fff; line-height: 1.6;
 }
+.badge.t-journal { background: var(--t-journal); }
+.badge.t-conference { background: var(--t-conference); }
+.badge.t-workshop { background: var(--t-workshop); }
+.badge.t-preprint { background: var(--t-preprint); }
 .badge.t-keynote { background: var(--t-keynote); margin-right: .4rem; vertical-align: .1em; }
 .badge-link { background: var(--soft); color: var(--accent); border: 1px solid var(--line); }
 .badge-link:hover { text-decoration: none; border-color: var(--accent); }
