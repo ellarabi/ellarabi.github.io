@@ -1,17 +1,11 @@
 {
-  "name": "ellarbi-website",
+  "name": "ellarabi.github.io",
   "version": "1.0.0",
   "private": true,
-  "description": "Personal academic website of Ella Rabinovich, Ph.D. Static HTML/JS, deployed to Cloudflare Pages.",
+  "description": "Personal academic website of Ella Rabinovich, Ph.D. Static HTML/JS, hosted on GitHub Pages.",
   "type": "module",
   "scripts": {
-    "dev": "wrangler pages dev site --port 8788",
-    "deploy": "node scripts/deploy.mjs",
-    "deploy:preview": "node scripts/deploy.mjs preview",
-    "setup": "wrangler pages project create ellarbi --production-branch main",
-    "login": "wrangler login"
-  },
-  "devDependencies": {
-    "wrangler": "^4.0.0"
+    "dev": "node scripts/serve.mjs",
+    "check": "node scripts/check.mjs"
   }
 }

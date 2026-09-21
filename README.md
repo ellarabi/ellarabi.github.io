@@ -1,10 +1,10 @@
-# ellarbi-website
+# ellarabi.github.io
 
 Personal academic website of **Ella Rabinovich, Ph.D.**: profile, publications, talks & materials, teaching, CV.
 
 - Plain static **HTML + CSS + vanilla JS**. No framework, no build step, no database.
 - Content lives in **JSON files** (`site/data/`) and **uploaded files** (`site/files/`, `site/img/`).
-- Hosted on **Cloudflare Pages**, deployed from a local machine with `npm run deploy`.
+- Hosted on **GitHub Pages** at https://ellarabi.github.io. Every push to `main` deploys automatically (`.github/workflows/deploy.yml`).
 
 ## Layout
 
@@ -15,7 +15,6 @@ site/                     <- everything in here is published as-is
   materials.html          Talks, slides, posters, datasets, code
   teaching.html           Courses
   404.html
-  _headers                Cloudflare Pages HTTP headers (security + caching)
   css/style.css           One stylesheet, automatic light/dark mode
   js/main.js              Reads site/data/*.json and renders each page
   data/
@@ -26,56 +25,40 @@ site/                     <- everything in here is published as-is
     teaching.json         [{ term, course, institution, role, url }]
   files/                  PDFs: cv.pdf, papers, slides, posters…
   img/                    profile.jpg, favicon.svg, other images
-scripts/deploy.mjs        Validate content, then deploy with wrangler
+scripts/check.mjs         Validates JSON + referenced files (runs in CI before deploy)
+scripts/serve.mjs         Zero-dependency local preview server
+.github/workflows/        GitHub Actions: check, then publish site/ to Pages
 ```
 
 ## Updating content
 
 1. Edit the relevant JSON file in `site/data/`.
 2. Drop any PDF / image into `site/files/` or `site/img/`, and reference it by relative path (e.g. `"files/talk-2026.pdf"`).
-3. Preview locally: `npm run dev` then open http://localhost:8788
-4. Deploy: `npm run deploy`
-5. Commit and push so the repo matches what's live.
+3. Preview locally: `npm run dev` then open http://localhost:8000
+4. Commit and push to `main`. GitHub Actions checks the content and publishes it; the site updates in about a minute. Progress is visible under the repo's **Actions** tab.
 
-The deploy script checks every JSON file parses and warns about any `files/…` or `img/…` path that doesn't exist.
+The check fails the deploy if a JSON file is invalid, and warns about any `files/…` or `img/…` path that doesn't exist. Run it locally with `npm run check`.
 
-## One-time setup (per computer)
+Editing directly on github.com also works: open a JSON file, click the pencil, commit. Upload PDFs with **Add file → Upload files** into `site/files/`.
 
-Requires [Node.js](https://nodejs.org/) 20+ and git. Works on Windows, macOS and Linux.
+## One-time setup
 
-```bash
-git clone https://github.com/srabi/ellarbi-website.git
-cd ellarbi-website
-npm install
-```
-
-Authenticate with Cloudflare, **either**:
-
-- **Browser login** (simplest, needs membership in the Cloudflare account): `npm run login`
-- **API token**: copy `.env.example` to `.env` and fill in `CLOUDFLARE_API_TOKEN` (permission: *Account → Cloudflare Pages → Edit*) and `CLOUDFLARE_ACCOUNT_ID`. `.env` is git-ignored.
-
-First deployment only — create the Pages project:
+Requires [Node.js](https://nodejs.org/) 20+ (only for local preview) and git. No `npm install` needed; there are no dependencies.
 
 ```bash
-npm run setup      # creates project "ellarbi" -> https://ellarbi.pages.dev
+git clone https://github.com/ellarabi/ellarabi.github.io.git
+cd ellarabi.github.io
+npm run dev
 ```
 
-## Commands
-
-| Command | What it does |
-|---|---|
-| `npm run dev` | Local preview at http://localhost:8788 (same behavior as Cloudflare, incl. `_headers`) |
-| `npm run deploy` | Validate + deploy to production |
-| `npm run deploy:preview` | Validate + deploy to a preview URL; production untouched |
-| `npm run setup` | Create the Cloudflare Pages project (once) |
-| `npm run login` | Log in to Cloudflare in the browser |
+In the repo on GitHub: **Settings → Pages → Build and deployment → Source: GitHub Actions** (once).
 
 ## Plan / roadmap
 
 **Phase 1: skeleton (done)**
 - Pages: About, Publications, Talks & Materials, Teaching, CV (PDF link).
 - JSON-driven content, responsive layout, light/dark mode, search filter on publications.
-- Local deploy script with content validation and commit tracking.
+- Push-to-deploy via GitHub Actions with content validation.
 
 **Phase 2: real content (Ella)**
 - Fill in `profile.json` (position, affiliation, bio, interests, email, links).
@@ -84,9 +67,8 @@ npm run setup      # creates project "ellarbi" -> https://ellarbi.pages.dev
 - Remove the `TODO` placeholders and example entries.
 
 **Phase 3: polish & launch**
-- Custom domain (Cloudflare dashboard → Pages → ellarbi → Custom domains).
 - Open Graph / social preview image and meta tags.
-- `sitemap.xml` once the domain is final.
-- Optional: BibTeX export per publication, Cloudflare Web Analytics (cookie-free), a contact form via a mailto link only (no backend).
+- `sitemap.xml`.
+- Optional: BibTeX export per publication, a contact form via a mailto link only (no backend).
 
 **Deliberately out of scope:** database, CMS, server-side code, build tooling.
